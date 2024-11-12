@@ -9,16 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isMigrationComplete: Bool = false
+    @State private var isEncryptionKeyAbailable: Bool = false
 
     var body: some View {
         Group {
-            if isMigrationComplete {
-                TokenListScreen()
-            } else {
+            if !isMigrationComplete {
                 DataMigrationScreen(isMigrationComplete: $isMigrationComplete)
+            } else if !isEncryptionKeyAbailable {
+                CreateEncryptionKeyScreen {
+                    isEncryptionKeyAbailable = true
+                }
+            } else {
+                TokenListScreen()
+            }
+        }
+        .onAppear {
+            if let _ = iOSKeyStore().get() {
+                isEncryptionKeyAbailable = true
             }
         }
     }
+
 }
 
 #Preview {

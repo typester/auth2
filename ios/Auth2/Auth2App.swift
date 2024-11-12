@@ -33,13 +33,6 @@ class DebugLogger: Logger {
     }
 }
 
-//tmp
-class iOSKeyStore: KeyStore {
-    func get() -> String? {
-        nil
-    }
-}
-
 extension Auth2Bridge {
     private static var sharedInstance: Auth2Bridge = {
         let databaseUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("database.db")
