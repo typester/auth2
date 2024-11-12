@@ -3,7 +3,7 @@ use std::{
     time::{SystemTime, UNIX_EPOCH},
 };
 
-use anyhow::{anyhow, bail};
+use anyhow::anyhow;
 use bridge::{Token, TokenAlg, TokenDetail, TokenResult};
 use enc::{decrypt_secret, encrypt_secret};
 use totp_rs::{Secret, TOTP};
