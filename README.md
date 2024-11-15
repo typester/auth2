@@ -23,6 +23,10 @@ For more details, please refer to the following blog entries:
 
 - [Mobile-app core in Rust #1: Overview - typester.dev](https://typester.dev/blog/2024/11/14/mobile-app-development-with-rust)
 
+## How to build, etc.
+
+Will be covered in the blog series linked above. Stay tuned!
+
 ## Author
 
 Daisuke Murase <typester@gmail.com>
