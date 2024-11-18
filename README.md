@@ -27,6 +27,7 @@ For more details, please refer to the following blog entries:
 ## How to build, etc.
 
 1. Setup environment by following "Setup environment" entry linked above.
+2. Follow the platform specific instruction listed below:
 
 ### Android
 
