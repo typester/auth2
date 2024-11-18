@@ -22,10 +22,30 @@ This is a sample app demonstrating an architecture where the core of the mobile 
 For more details, please refer to the following blog entries:
 
 - [Mobile-app core in Rust #1: Overview - typester.dev](https://typester.dev/blog/2024/11/14/mobile-app-development-with-rust)
+- [Mobile-app core in Rust #2: Setup environment - typester.dev](https://typester.dev/blog/2024/11/16/mobile-app-core-in-rust-setup-environment)
 
 ## How to build, etc.
 
-Will be covered in the blog series linked above. Stay tuned!
+1. Setup environment by following "Setup environment" entry linked above.
+
+### Android
+
+```
+cd ./core
+./build-android-lib.sh
+```
+
+Once the build completes without errors, you should be able to open the =android= directory in Android Studio and run the app.
+
+### iOS
+
+```
+cd ./core
+cargo lipo --release
+cargo build --release --target aarch64-apple-ios-sim
+```
+
+Once this completes without errors, you should be able to open =ios/Auth2.xcodeproj= in Xcode and run the app.
 
 ## Author
 
